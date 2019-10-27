@@ -1,0 +1,40 @@
+*{margin: 0; padding: 0;box-sizing: border-box;}
+
+#div1 {
+    position: fixed;
+    top: 5%;
+    right: 10%;
+}
+#div1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*
+* 这里是灵丸
+*/
+#div1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*适配手机*/
+@media screen and (max-width: 500px) {
+    #html {
+        height: 60vh;
+        overflow: auto;
+        word-break: break-all;
+    }
+    #div1{
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+    }
+}
